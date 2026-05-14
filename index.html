@@ -67,6 +67,8 @@
   .nav-tab i { font-size: 14px; }
   .nav-tab.active { color: var(--color-text-primary); border-bottom-color: #185fa5; font-weight: 500; }
   .nav-tab:hover:not(.active) { color: var(--color-text-primary); background: var(--color-background-secondary); }
+  .nav { flex-wrap: wrap; }
+  .nav-run { display: flex; align-items: center; padding: 6px 12px; margin-left: auto; border-left: 0.5px solid var(--color-border-tertiary); }
 
   /* screens */
   .screen { display: none; padding: 1.5rem; }
@@ -168,6 +170,7 @@
     <button class="nav-tab active" onclick="goTo('configure',this)" id="tab-configure"><i class="ti ti-settings"></i>Configure</button>
     <button class="nav-tab" onclick="goTo('results',this)" id="tab-results"><i class="ti ti-chart-line"></i>Results</button>
     <button class="nav-tab" onclick="goTo('flags',this)" id="tab-flags"><i class="ti ti-alert-triangle"></i>Flags <span class="badge-count zero" id="flag-badge">0</span></button>
+    <div class="nav-run"><button class="run-btn" onclick="runAndGo()" style="padding:7px 18px;font-size:13px"><i class="ti ti-player-play" style="font-size:14px"></i>Run simulation</button></div>
   </div>
 
   <div class="screen active" id="screen-configure">
@@ -233,10 +236,7 @@
         </div>
       </div>
     </div>
-    <div class="run-row">
-      <button class="run-btn" onclick="runAndGo()"><i class="ti ti-player-play" style="font-size:15px"></i>Run simulation</button>
-    </div>
-  </div>
+</div>
 
   <div class="screen" id="screen-results">
     <div id="no-sim-results" class="no-sim"><i class="ti ti-player-play"></i>Run the simulation first</div>
