@@ -1,1 +1,1 @@
-# Panaceasimulator
+# Panacea simulator
